@@ -1,0 +1,187 @@
+--> Browser
+
+console.log('hello world');
+2 + 2
+alert('yo')
+
+--> Editor : VS code 
+
+--> Open up folder - JS basics
+
+--> index.html
+--> ! + tab (boiler plate)
+
+--> Install live server (if possible) & open index.html
+
+--> put <script> tag at the end bcoz rendering will be late parsing the js first
+--> Have the code between the tags
+
+--> write the same code as above inside script tag
+--> everything must be  terminated by semicolon
+--> comments (ignored by js engine) - for documentation to other devs the whys and hows
+--> open the browser again and reload and open console
+
+--> open index.js
+--> cut all the code inside script tag, and put em inside index.js
+--> put reference to that js file inside the html page through src
+
+--> Variables 
+- to store data temporarily with a name to refer 
+- like putting label on each boxes
+
+--> before ES6 - var was used
+--> now - let is used
+
+--> let name;
+    console.log(name)
+
+--> By default, variables value is undefined
+
+--> YOu can even initialize at the declaration; try em out
+    
+    Variable names
+--> Cannot be a keyword
+    Meaningful
+    Cannot start with a number
+    Cannot contain a space or hyphen( Introduce camelcase Notation )
+    Case-sensitive ( that's why camelcase is useful )
+
+--> let firstName = 'Akash', lastName = 'Raj';
+OR
+--> let firstName = 'Akash';
+    let lastName = 'Raj';
+
+--> Constants
+
+--> let interestRate = 0.3;
+	interestRate = 1;
+	console.log(interestRate);
+--> Sometimes we don't want our values to get changed, so const
+
+--> Just change the 'let' to 'const' in above code, you'll see the error
+
+--> What kinds of values can be assigned
+
+--> String, Number, Boolean, undefined, null, object, array
+
+--> demo them individually
+	let name = 'Akash';
+	let age = 100;
+	let isApproved = false;
+	let firstName = undefined;
+	let selectedColor = null;
+
+--> both true and false are reserved keywords so can't be used while naming variables
+
+--> Type of a variable can be changed dynamically
+--> Demo them using  [typeof <name>]
+
+--> typeof selectedColor  is "object"
+
+--> what is an object? just like in real life
+
+--> Multiple related variables can be put into an object
+	eg. put name and age into an object called person
+--> let person = {
+	//key value pairs
+	name: 'Mosh',
+	age: 30
+    }
+--> console.log(person)
+
+--> Two ways of accessing a property
+ 1. Dot notation
+ 2. Bracket notation (person['name'])
+
+--> Dot is mostly better
+--> Bracket is better when you don't know the actual keyword and it is based on user input
+
+--> Dealing with list of objects
+	eg. list of items in shopping kart
+--> let selectedItems = [] // empty array
+
+--> let selectedItems = ['red', 'blue']
+
+--> indexed access = selectedItems[0]
+
+--> length is dynamic so , selectedItems[2] = 'green' works
+--> selectedItems[2] = 1 also works
+
+--> Illustrate all the properties that are inherited by array by pressing dot(.)
+--> Maybe demonstrate forEach
+
+--> Functions - set of statements that does something like calculation or so
+--> function greet(){
+	//logic or work
+	console.log('hello world');
+    } //Don't need to add semicolon
+    greet(); //Calling
+
+--> Our functions can have inputs
+--> function greet(name){ // Name is the parameter to the function
+	console.log('Hello world, ' + name);
+    }
+    greet('Akash'); // Argument is the actual value that we supply
+    greet('Mary');
+--> function can have multiple parameters
+
+--> Types of functions
+
+--> You can also return a value 
+function square(number) {
+	return number * number;
+}
+let number = square(2);
+console.log(number);
+
+--> how many function calls do we have here? Two...
+	console.log() is also a function that is defined somewhere that takes so many different types of inputs
+
+--> DOM manipulation (Document Object Model)
+--> Take models or parts of html page and change it.
+
+--> <p id="someText"></p>
+--> document.getElementById('someText).innerHTML = 'Hello world';
+
+--> let age = prompt('What is your age?');
+--> document.getElementById('someText).innerHTML = 'You are ' + age + ' years old';
+
+--> What if??
+	if(age >= 18 && age <= 60){
+		console.log('You are allowed to work')
+	}
+-->Js comparison operators: 
+
+--> What if things have to be done multiple times?
+	//while loop
+	let n = 0;
+	while( n < 100 )
+	{
+		n += 1;
+		console.log(n);	
+	}
+
+--> for(let n = 0; n < 100; n++)
+    {
+	console.log(n);
+    }
+
+--> Each object will have some functions associated with them, 
+
+--> let s = 'akash@gmail.com';
+    console.log(s.indexOf('@gmail.com'))
+
+--> array common methods
+	.push()
+	.forEach()
+--> Events- Events are actions or occurrences that happen in the system you are programming
+
+--> . For example, if the user clicks a button on a webpage, 
+you might want to respond to that action by displaying an information box.
+
+Each available event has an event handler
+
+When such a block of code is defined to 
+be run in response to an event firing, 
+we say we are registering an event handler. 
+Note that event handlers are sometimes called event listeners
